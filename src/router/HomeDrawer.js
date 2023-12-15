@@ -11,7 +11,7 @@ export default HomeDrawer = () => {
             drawerContent={(props) => <MyDrawer {...props} />}
         >
             <Drawer.Screen
-                name='Halo Recardo'
+                name='Halo Recardo 👋🏻'
                 component={HomeTabs}
                 options={{
                     headerRight: () => <NotificationIcon />,
@@ -19,6 +19,7 @@ export default HomeDrawer = () => {
                     headerRightContainerStyle: {
                         paddingHorizontal: 10,
                     },
+                    headerTitleAlign:'center'
                 }}
             />
         </Drawer.Navigator>

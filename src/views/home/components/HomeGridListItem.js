@@ -19,7 +19,7 @@ const HomeGridListItem = ({ item, onPress }) => {
                 style={styles.imageStyle}
                 source={{ uri: item?.image }}
             />
-            <Spacing val={15} />
+            <Spacing val={10} />
             <Text>{item?.title}</Text>
             <Spacing val={10} />
         </TouchableOpacity>
@@ -30,19 +30,18 @@ export default memo(HomeGridListItem)
 
 const styles = StyleSheet.create({
     mainBox: {
-        width: width / 2.5,
+        width: width / 2.4,
 
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: Color.white,
         borderRadius: 15,
-        marginHorizontal: 15,
         overflow: 'hidden',
-        marginVertical: 15,
+        margin:10,
     },
     imageStyle: {
-        height: 100,
+        height: 90,
         width: '100%',
     },
 })

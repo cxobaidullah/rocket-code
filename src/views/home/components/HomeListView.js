@@ -31,7 +31,7 @@ const HomeListView = ({ onPress, item }) => {
                     </RoundedView>
                 )}
                 <Spacing type={'h'} val={20} />
-                <ArrowRight height={20} white={20} />
+                <ArrowRight height={50} white={50} />
                 <Spacing type={'h'} val={5} />
             </View>
         </TouchableOpacity>
