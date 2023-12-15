@@ -10,7 +10,8 @@ import Color from '../style/Color'
 import UserProfile from '../views/home/UserProfile'
 import OffersIcon from '../assets/svg/offers-icons.svg'
 import OffersScreen from '../views/home/OffersScreen'
-import { View } from 'react-native';  
+import { View } from 'react-native'
+import Style from '../style/Style'
 
 const Tab = createBottomTabNavigator()
 
@@ -21,7 +22,6 @@ export default HomeTabs = () => {
             screenOptions={({ route }) => ({
                 tabBarShowLabel: false,
                 tabBarStyle: {
-                    
                     shadowColor: Color.black,
                     shadowOffset: {
                         width: 0,
@@ -35,7 +35,12 @@ export default HomeTabs = () => {
                         case 'HomeScreen':
                             if (focused)
                                 return (
-                                    <HomefocusedIcon height={30} width={30} />
+                                    <View style={Style.tabBarIcons}>
+                                        <HomefocusedIcon
+                                            height={30}
+                                            width={30}
+                                        />
+                                    </View>
                                 )
                             else
                                 return (
@@ -45,7 +50,12 @@ export default HomeTabs = () => {
                         case 'UserProfile':
                             if (focused)
                                 return (
-                                    <UserProfileIcon height={25} width={25} />
+                                    <View style={Style.tabBarIcons}>
+                                        <UserProfileIcon
+                                            height={25}
+                                            width={25}
+                                        />
+                                    </View>
                                 )
                             else
                                 return (
@@ -54,17 +64,26 @@ export default HomeTabs = () => {
                             break
                         case 'OfferScreen':
                             if (focused)
-                                return <OffersIcon height={25} width={25} />
+                                return (
+                                    <View style={Style.tabBarIcons}>
+                                        <OffersIcon height={25} width={25} />
+                                    </View>
+                                )
                             else return <OffersIcon height={25} width={25} />
                             break
                         case 'SettingScreen':
                             if (focused)
                                 return (
-                                    <ShopfocusedIcon height={30} width={30} />
+                                    <View style={Style.tabBarIcons}>
+                                        <ShopfocusedIcon
+                                            height={25}
+                                            width={25}
+                                        />
+                                    </View>
                                 )
                             else
                                 return (
-                                    <ShopUnfocusedIcon height={30} width={30} />
+                                    <ShopUnfocusedIcon height={25} width={25} />
                                 )
 
                             break
@@ -73,7 +92,6 @@ export default HomeTabs = () => {
                             break
                     }
                 },
-         
             })}
         >
             <Tab.Screen

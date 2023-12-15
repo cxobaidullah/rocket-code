@@ -46,4 +46,14 @@ export default Style = StyleSheet.create({
         height: 70,
         borderRadius: 10,
     },
+    tabBarIcons: {
+        transform: [{ translateX: -10 }, { translateY: -10 }],
+        height: 40,
+        width: 40,
+        borderRadius: 100,
+        borderWidth: 3,
+        borderColor: Color.white,
+        alignItems: 'center',
+        backgroundColor: Color.white,
+    },
 })

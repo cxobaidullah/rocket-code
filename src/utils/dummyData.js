@@ -40,7 +40,7 @@ export const homeScreenListData = [
         image: 'https://media.istockphoto.com/id/1409887939/photo/manager-and-workers-taking-care-about-their-colleague-lying-on-the-floor-in-a-warehouse.jpg?s=2048x2048&w=is&k=20&c=pTXzAE6ANPAx9u494Ou6u4EpQ2kQBGveoxlr6Y1TV_s=',
         title: 'Incidentes',
         count: 0,
-    }, 
+    },
     {
         id: 8,
         image: 'https://media.istockphoto.com/id/1409887939/photo/manager-and-workers-taking-care-about-their-colleague-lying-on-the-floor-in-a-warehouse.jpg?s=2048x2048&w=is&k=20&c=pTXzAE6ANPAx9u494Ou6u4EpQ2kQBGveoxlr6Y1TV_s=',

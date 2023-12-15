@@ -16,9 +16,7 @@ const HomeListView = ({ onPress, item }) => {
                 <Spacing type={'h'} val={15} />
                 <Text>{item?.title}</Text>
             </View>
-            <View
-                style={styles.innerBox}
-            >
+            <View style={styles.innerBox}>
                 {item?.count > 0 && (
                     <RoundedView layout={'list'}>
                         <Text style={Style.colorWhite}>
@@ -63,8 +61,8 @@ const styles = StyleSheet.create({
         width: 50,
         borderRadius: 100,
     },
-    innerBox:{
-         alignItems: 'center', 
-         flexDirection: 'row' 
-        }
+    innerBox: {
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
 })

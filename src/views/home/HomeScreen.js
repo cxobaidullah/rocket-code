@@ -74,23 +74,15 @@ export default HomeScreen = ({}) => {
                     data={homeScreenListData}
                     renderItem={({ item }) =>
                         layout === 'grid' ? (
-                            <HomeGridListItem
-                                item={item}
-                                onPress={() => {
-                                }}
-                            />
+                            <HomeGridListItem item={item} onPress={() => {}} />
                         ) : (
-                            <HomeListView
-                                item={item}
-                                onPress={() => {
-                                }}
-                            />
+                            <HomeListView item={item} onPress={() => {}} />
                         )
                     }
                     numColumns={column}
                     keyExtractor={(item) =>
                         item.id ? item.id.toString() : null
-                    } 
+                    }
                 />
             </ListContainer>
         </HomeScreenBackground>
