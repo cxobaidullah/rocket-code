@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
 
         alignSelf: 'center',
-        paddingHorizontal: 15,
+        paddingHorizontal: 12,
         paddingVertical: 5,
 
         shadowColor: '#000',
