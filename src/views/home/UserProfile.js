@@ -2,11 +2,11 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const UserProfile = () => {
-  return (
-    <View>
-      <Text>User Profile</Text>
-    </View>
-  )
+    return (
+        <View>
+            <Text>User Profile</Text>
+        </View>
+    )
 }
 
 export default UserProfile

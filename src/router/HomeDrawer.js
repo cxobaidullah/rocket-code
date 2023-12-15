@@ -19,7 +19,7 @@ export default HomeDrawer = () => {
                     headerRightContainerStyle: {
                         paddingHorizontal: 10,
                     },
-                    headerTitleAlign:'center'
+                    headerTitleAlign: 'center',
                 }}
             />
         </Drawer.Navigator>

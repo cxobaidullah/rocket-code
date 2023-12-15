@@ -14,9 +14,9 @@ const Tab = createBottomTabNavigator()
 
 export default HomeTabs = () => {
     return (
-        <Tab.Navigator 
-        initialRouteName='Home'
-        screenOptions={({ route }) => ({
+        <Tab.Navigator
+            initialRouteName='Home'
+            screenOptions={({ route }) => ({
                 tabBarShowLabel: false,
                 tabBarStyle: {
                     height: '10.5%',
@@ -27,35 +27,51 @@ export default HomeTabs = () => {
                     },
                     shadowOpacity: 0.25,
                     shadowRadius: 3.84,
-                     
                 },
                 tabBarIcon: ({ focused }) => {
                     switch (route.name) {
                         case 'HomeScreen':
-                            if (focused) return <HomefocusedIcon height = {30} width = {30} />
-                            else return <HomeUnfocusedIcon height = {30} width = {30} />
+                            if (focused)
+                                return (
+                                    <HomefocusedIcon height={30} width={30} />
+                                )
+                            else
+                                return (
+                                    <HomeUnfocusedIcon height={30} width={30} />
+                                )
                             break
-                            case 'UserProfile':
-                            if (focused) return <UserProfileIcon height = {25} width = {25} />
-                            else return <UserProfileIcon height = {25} width = {25} />
+                        case 'UserProfile':
+                            if (focused)
+                                return (
+                                    <UserProfileIcon height={25} width={25} />
+                                )
+                            else
+                                return (
+                                    <UserProfileIcon height={25} width={25} />
+                                )
                             break
-                            case 'OfferScreen':
-                            if (focused) return <OffersIcon height = {25} width = {25} />
-                            else return <OffersIcon height = {25} width = {25} />
+                        case 'OfferScreen':
+                            if (focused)
+                                return <OffersIcon height={25} width={25} />
+                            else return <OffersIcon height={25} width={25} />
                             break
                         case 'SettingScreen':
-                            if (focused) return <ShopfocusedIcon height = {30} width = {30} />
-                            else return <ShopUnfocusedIcon height = {30} width = {30} />
+                            if (focused)
+                                return (
+                                    <ShopfocusedIcon height={30} width={30} />
+                                )
+                            else
+                                return (
+                                    <ShopUnfocusedIcon height={30} width={30} />
+                                )
 
                             break
-                       
-                        
+
                         default:
                             break
                     }
                 },
             })}
-        
         >
             <Tab.Screen
                 name='HomeScreen'
@@ -66,8 +82,8 @@ export default HomeTabs = () => {
                 name='SettingScreen'
                 component={SettingScreen}
                 options={{ headerShown: false }}
-            /> 
-               <Tab.Screen
+            />
+            <Tab.Screen
                 name='OfferScreen'
                 component={OffersScreen}
                 options={{ headerShown: false }}
@@ -77,7 +93,6 @@ export default HomeTabs = () => {
                 component={UserProfile}
                 options={{ headerShown: false }}
             />
-           
         </Tab.Navigator>
     )
 }

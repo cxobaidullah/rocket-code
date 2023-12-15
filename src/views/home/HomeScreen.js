@@ -68,7 +68,7 @@ export default HomeScreen = ({}) => {
 
                 <FlatList
                     key={key}
-                    showsVerticalScrollIndicator ={false}
+                    showsVerticalScrollIndicator={false}
                     data={homeScreenListData}
                     renderItem={({ item }) =>
                         layout === 'grid' ? (
