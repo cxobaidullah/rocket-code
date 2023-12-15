@@ -11,7 +11,7 @@ import Spacing from '../../../components/Spacing'
 import Color from '../../../style/Color'
 const width = Dimensions.get('window').width
 const HomeGridListItem = ({ item, onPress }) => {
-    console.log('render')
+ 
     return (
         <TouchableOpacity onPress={onPress} style={styles.mainBox}>
             <Image

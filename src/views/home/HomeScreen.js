@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native'
-import Style from '../../style/Style'
-import Color from '../../style/Color'
+
 import HomeScreenBackground from './components/HomeScreenBackground'
 import Spacing from '../../components/Spacing'
 import TextCard from '../../components/TextCard'
@@ -11,7 +10,6 @@ import UnSelectedGridIcon from '../../assets/svg/unselected-grid.svg'
 import SelectedGridIcon from '../../assets/svg/selected-grid.svg'
 import UnSelectedListIcon from '../../assets/svg/unselected-list.svg'
 import SelectedListIcon from '../../assets/svg/selected-list.svg'
-// import HomeScreenStyles from './HomeScreenStyles'
 import HomeGridListItem from './components/HomeGridListItem'
 import { homeScreenListData } from '../../utils/dummyData'
 import RoundedView from '../../components/RoundedView'
@@ -79,14 +77,12 @@ export default HomeScreen = ({}) => {
                             <HomeGridListItem
                                 item={item}
                                 onPress={() => {
-                                    // Handle onPress as needed
                                 }}
                             />
                         ) : (
                             <HomeListView
                                 item={item}
                                 onPress={() => {
-                                    // Handle onPress as needed
                                 }}
                             />
                         )
@@ -94,7 +90,7 @@ export default HomeScreen = ({}) => {
                     numColumns={column}
                     keyExtractor={(item) =>
                         item.id ? item.id.toString() : null
-                    } // Handle potential null or undefined item.id
+                    } 
                 />
             </ListContainer>
         </HomeScreenBackground>
