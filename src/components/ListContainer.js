@@ -14,6 +14,6 @@ const styles = StyleSheet.create({
         backgroundColor: Color.lightGrey,
         flex: 1,
         borderRadius: 15,
-        opacity: 0.92,
+        opacity: 0.95,
     },
 })

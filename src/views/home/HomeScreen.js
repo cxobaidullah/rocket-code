@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native'
 import Style from '../../style/Style'
 import Color from '../../style/Color'
@@ -12,12 +12,26 @@ import SelectedGridIcon from '../../assets/svg/selected-grid.svg'
 import UnSelectedListIcon from '../../assets/svg/unselected-list.svg'
 import SelectedListIcon from '../../assets/svg/selected-list.svg'
 import HomeScreenStyles from './HomeScreenStyles'
+import HomeGridListItem from './components/HomeGridListItem'
+import { homeScreenListData } from '../../utils/dummyData'
+import RoundedView from '../../components/RoundedView'
+import HomeListView from './components/HomeListView'
 export default HomeScreen = ({}) => {
     const [layout, setLayout] = useState('grid')
+    const [column, setNumberOfColumn] = useState(2)
+    const [key, setKey] = useState('grid-key')
 
-    const handleTogle = (layoutName) => {
+    useEffect(() => {
+        setLayout('grid')
+    }, [])
+    const handleTogle = (layoutName, numColumns) => {
+        console.log('layoutName', layoutName)
         setLayout(layoutName)
+        setKey(layoutName === 'grid' ? 'grid-key' : 'list-key')
+
+        setNumberOfColumn(numColumns)
     }
+
     return (
         <HomeScreenBackground>
             <Spacing val={20} />
@@ -26,42 +40,55 @@ export default HomeScreen = ({}) => {
             <ListContainer>
                 <Spacing val={10} />
                 <View style={HomeScreenStyles.toggleContainer}>
-                    <TouchableOpacity
-                        onPress={() => handleTogle('grid')}
-                        style={[
-                            HomeScreenStyles.iconsBox,
-                            {
-                                backgroundColor:
-                                    layout === 'grid'
-                                        ? Color.yellowColor
-                                        : Color.white,
-                            },
-                        ]}
-                    >
+                    <RoundedView
+                        onPress={() => handleTogle('grid', 2)}
+                        layout={layout === 'grid' ? layout : ''}>
                         {layout === 'grid' ? (
                             <SelectedGridIcon height={25} width={25} />
                         ) : (
                             <UnSelectedGridIcon height={25} width={25} />
                         )}
-                    </TouchableOpacity>
+                    </RoundedView>
 
-                    <TouchableOpacity
-                        onPress={() => handleTogle('list')}
-                        style={[
-                            HomeScreenStyles.iconsBox,
-                            {
-                                backgroundColor:
-                                    layout === 'list' ? '#ddad5a' : Color.white,
-                            },
-                        ]}
-                    >
+                    <RoundedView
+                        onPress={() => handleTogle('list', 1)}
+                        layout={layout === 'list' ? layout : ''}>
                         {layout === 'list' ? (
                             <SelectedListIcon height={25} width={25} />
                         ) : (
                             <UnSelectedListIcon height={25} width={25} />
                         )}
-                    </TouchableOpacity>
+                    </RoundedView>
                 </View>
+
+                {/* lists View */}
+                <Spacing val={14} />
+
+                <FlatList
+                    key={key}
+                    data={homeScreenListData}
+                    renderItem={({ item }) =>
+                        layout === 'grid' ? (
+                            <HomeGridListItem
+                                item={item}
+                                onPress={() => {
+                                    // Handle onPress as needed
+                                }}
+                            />
+                        ) : (
+                            <HomeListView
+                                item={item}
+                                onPress={() => {
+                                    // Handle onPress as needed
+                                }}
+                            />
+                        )
+                    }
+                    numColumns={column}
+                    keyExtractor={(item) =>
+                        item.id ? item.id.toString() : null
+                    } // Handle potential null or undefined item.id
+                />
             </ListContainer>
         </HomeScreenBackground>
     )
