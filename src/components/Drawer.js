@@ -41,7 +41,7 @@ const MyDrawer = (props) => {
                     onPress={() => navigation.navigate('HomeScreen')}
                 />
                 <DrawerItem
-                    label='Settings'
+                    label='Shop'
                     onPress={() => navigation.navigate('SettingScreen')}
                 />
             </ScrollView>
