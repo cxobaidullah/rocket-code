@@ -14,7 +14,7 @@ const HomeListView = ({ onPress, item }) => {
                     source={{ uri: item?.image }}
                 />
                 <Spacing type={'h'} val={15} />
-                <Text>{item?.title}</Text>
+                <Text style ={[Style.colorBlack]}>{item?.title}</Text>
             </View>
             <View style={styles.innerBox}>
                 {item?.count > 0 && (

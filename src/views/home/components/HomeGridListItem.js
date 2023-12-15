@@ -9,6 +9,7 @@ import {
 import React, { memo } from 'react'
 import Spacing from '../../../components/Spacing'
 import Color from '../../../style/Color'
+import Style from '../../../style/Style'
 const width = Dimensions.get('window').width
 const HomeGridListItem = ({ item, onPress }) => {
     return (
@@ -19,7 +20,7 @@ const HomeGridListItem = ({ item, onPress }) => {
                 source={{ uri: item?.image }}
             />
             <Spacing val={10} />
-            <Text>{item?.title}</Text>
+            <Text style = {[Style.colorBlack, Style.textAlign]}>{item?.title}</Text>
             <Spacing val={10} />
         </TouchableOpacity>
     )
