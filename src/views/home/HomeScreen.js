@@ -42,7 +42,8 @@ export default HomeScreen = ({}) => {
                 <View style={HomeScreenStyles.toggleContainer}>
                     <RoundedView
                         onPress={() => handleTogle('grid', 2)}
-                        layout={layout === 'grid' ? layout : ''}>
+                        layout={layout === 'grid' ? layout : ''}
+                    >
                         {layout === 'grid' ? (
                             <SelectedGridIcon height={25} width={25} />
                         ) : (
@@ -52,7 +53,8 @@ export default HomeScreen = ({}) => {
 
                     <RoundedView
                         onPress={() => handleTogle('list', 1)}
-                        layout={layout === 'list' ? layout : ''}>
+                        layout={layout === 'list' ? layout : ''}
+                    >
                         {layout === 'list' ? (
                             <SelectedListIcon height={25} width={25} />
                         ) : (

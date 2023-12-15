@@ -21,7 +21,8 @@ const HomeListView = ({ onPress, item }) => {
                     alignItems: 'center',
                     // backgroundColor:'red' ,
                     flexDirection: 'row',
-                }}>
+                }}
+            >
                 {item?.count > 0 && (
                     <RoundedView layout={'list'}>
                         <Text style={Style.colorWhite}>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 2, height: 12 },
         shadowOpacity: 0.5,
         shadowRadius: 4,
-        elevation: 8,  
+        elevation: 8,
     },
     imageStyle: {
         height: 50,

@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import 'react-native-gesture-handler'
 import { Provider } from 'react-redux'
 import store from './src/app/store'
- import HomeRouter from './src/router/HomeRouter'
+import HomeRouter from './src/router/HomeRouter'
 import SplashScreen from './src/views/splash/SplashScreen'
 
 const Stack = createNativeStackNavigator()
@@ -18,7 +18,7 @@ export default App = () => {
                         component={SplashScreen}
                         options={{ headerShown: false }}
                     />
-                  
+
                     <Stack.Screen
                         name='HomeRouter'
                         component={HomeRouter}
