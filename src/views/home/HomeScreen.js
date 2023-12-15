@@ -19,7 +19,7 @@ import HomeListView from './components/HomeListView'
 export default HomeScreen = ({}) => {
     const HomeScreenStyles = require('./HomeScreenStyles').default
 
-    const [layout, setLayout] = useState('grid')
+    const [layout, setLayout] = useState('')
     const [column, setNumberOfColumn] = useState(2)
     const [key, setKey] = useState('grid-key')
 
@@ -70,6 +70,8 @@ export default HomeScreen = ({}) => {
 
                 <FlatList
                     key={key}
+                    initialNumToRender={4}
+                    windowSize={5}
                     showsVerticalScrollIndicator={false}
                     data={homeScreenListData}
                     renderItem={({ item }) =>
