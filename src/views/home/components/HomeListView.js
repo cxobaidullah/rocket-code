@@ -7,7 +7,7 @@ import Style from '../../../style/Style'
 const HomeListView = ({ onPress, item }) => {
     return (
         <TouchableOpacity onPress={onPress} style={styles.mainBox}>
-            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+            <View style={styles.innerBox}>
                 <Image
                     resizeMode='cover'
                     style={styles.imageStyle}
@@ -17,11 +17,7 @@ const HomeListView = ({ onPress, item }) => {
                 <Text>{item?.title}</Text>
             </View>
             <View
-                style={{
-                    alignItems: 'center',
-                   
-                    flexDirection: 'row',
-                }}
+                style={styles.innerBox}
             >
                 {item?.count > 0 && (
                     <RoundedView layout={'list'}>
@@ -67,4 +63,8 @@ const styles = StyleSheet.create({
         width: 50,
         borderRadius: 100,
     },
+    innerBox:{
+         alignItems: 'center', 
+         flexDirection: 'row' 
+        }
 })

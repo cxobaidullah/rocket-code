@@ -11,12 +11,14 @@ import UnSelectedGridIcon from '../../assets/svg/unselected-grid.svg'
 import SelectedGridIcon from '../../assets/svg/selected-grid.svg'
 import UnSelectedListIcon from '../../assets/svg/unselected-list.svg'
 import SelectedListIcon from '../../assets/svg/selected-list.svg'
-import HomeScreenStyles from './HomeScreenStyles'
+// import HomeScreenStyles from './HomeScreenStyles'
 import HomeGridListItem from './components/HomeGridListItem'
 import { homeScreenListData } from '../../utils/dummyData'
 import RoundedView from '../../components/RoundedView'
 import HomeListView from './components/HomeListView'
 export default HomeScreen = ({}) => {
+    const HomeScreenStyles = require('./HomeScreenStyles').default
+
     const [layout, setLayout] = useState('grid')
     const [column, setNumberOfColumn] = useState(2)
     const [key, setKey] = useState('grid-key')
@@ -36,7 +38,7 @@ export default HomeScreen = ({}) => {
         <HomeScreenBackground>
             <Spacing val={20} />
             <TextCard text={resources?.cordilleras} />
-            <Spacing val={10} />
+            <Spacing val={12} />
             <ListContainer>
                 <Spacing val={10} />
                 <View style={HomeScreenStyles.toggleContainer}>

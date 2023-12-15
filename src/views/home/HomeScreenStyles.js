@@ -10,7 +10,7 @@ export default HomeScreenStyles = StyleSheet.create({
         alignSelf: 'flex-end',
         backgroundColor: Color.white,
         paddingVertical: 4,
-        width: '35%',
+        width: '30%',
         borderRadius: 50,
         marginHorizontal: 10,
     },

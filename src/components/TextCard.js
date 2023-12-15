@@ -14,8 +14,8 @@ export default memo(TextCard)
 
 const styles = StyleSheet.create({
     mainBox: {
-        width: '60%',
-        paddingVertical: 15,
+        width: '50%',
+        paddingVertical: 12,
         alignItems: 'center',
         borderRadius: 50,
         backgroundColor: Color.white,
