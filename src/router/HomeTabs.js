@@ -10,6 +10,8 @@ import Color from '../style/Color'
 import UserProfile from '../views/home/UserProfile'
 import OffersIcon from '../assets/svg/offers-icons.svg'
 import OffersScreen from '../views/home/OffersScreen'
+import { View } from 'react-native';  
+
 const Tab = createBottomTabNavigator()
 
 export default HomeTabs = () => {
@@ -19,7 +21,7 @@ export default HomeTabs = () => {
             screenOptions={({ route }) => ({
                 tabBarShowLabel: false,
                 tabBarStyle: {
-                    height: '10.5%',
+                    
                     shadowColor: Color.black,
                     shadowOffset: {
                         width: 0,
@@ -71,6 +73,7 @@ export default HomeTabs = () => {
                             break
                     }
                 },
+         
             })}
         >
             <Tab.Screen
