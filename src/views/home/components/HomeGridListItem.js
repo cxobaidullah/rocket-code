@@ -18,6 +18,9 @@ const HomeGridListItem = ({ item, onPress }) => {
                 resizeMode='cover'
                 style={styles.imageStyle}
                 source={{ uri: item?.image }}
+                progressiveRenderingEnabled={true}
+                cache="reload"
+                
             />
             <Spacing val={10} />
             <Text style = {[Style.colorBlack, Style.textAlign]}>{item?.title}</Text>
@@ -43,5 +46,6 @@ const styles = StyleSheet.create({
     imageStyle: {
         height: 90,
         width: '100%',
+        backgroundColor:Color.light
     },
 })

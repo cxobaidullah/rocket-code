@@ -12,6 +12,8 @@ const HomeListView = ({ onPress, item }) => {
                     resizeMode='cover'
                     style={styles.imageStyle}
                     source={{ uri: item?.image }}
+                    progressiveRenderingEnabled={true}
+                    cache="reload"
                 />
                 <Spacing type={'h'} val={15} />
                 <Text style ={[Style.colorBlack]}>{item?.title}</Text>

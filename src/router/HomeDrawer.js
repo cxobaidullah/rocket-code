@@ -21,7 +21,7 @@ export default HomeDrawer = () => {
             drawerContent={(props) => <MyDrawer {...props} />}
         >
             <Drawer.Screen
-                name='Halo Recardo 👋🏻'
+                name='Hola Ricardo 👋🏻'
                 component={HomeTabs}
                 options={{
                     headerLeft: () => (

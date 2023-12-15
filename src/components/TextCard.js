@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { memo } from 'react'
 import Color from '../style/Color'
+import Style from '../style/Style'
 const TextCard = ({ text, children }) => {
     return (
         <View style={styles.mainBox}>
-            <Text>{text}</Text>
+            <Text style = {Style.colorBlack}>{text}</Text>
             {children}
         </View>
     )
