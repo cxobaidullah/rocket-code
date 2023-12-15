@@ -15,8 +15,8 @@ export default HomeScreenStyles = StyleSheet.create({
         marginHorizontal: 10,
     },
     iconsBox: {
-        height: 50,
-        width: 50,
+        height: 40,
+        width: 40,
         borderRadius: 100,
         alignItems: 'center',
         justifyContent: 'center',

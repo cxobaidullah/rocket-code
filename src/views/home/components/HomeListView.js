@@ -19,7 +19,7 @@ const HomeListView = ({ onPress, item }) => {
             <View
                 style={{
                     alignItems: 'center',
-                    // backgroundColor:'red' ,
+                   
                     flexDirection: 'row',
                 }}
             >
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
         alignSelf: 'center',
         paddingHorizontal: 15,
-        paddingVertical: 8,
+        paddingVertical: 5,
 
         shadowColor: '#000',
         shadowOffset: { width: 2, height: 12 },
