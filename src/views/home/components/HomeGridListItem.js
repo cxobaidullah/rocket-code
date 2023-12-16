@@ -27,12 +27,10 @@ const HomeGridListItem = ({ item, onPress }) => {
             </Text>
             <Spacing val={10} />
             {item?.count > 0 ? (
-                <View
-                style={styles.countView}>
-                <Text style = {Style.colorWhite}>{item?.count}</Text>
-            </View>
-            ):null}
-           
+                <View style={styles.countView}>
+                    <Text style={Style.colorWhite}>{item?.count}</Text>
+                </View>
+            ) : null}
         </TouchableOpacity>
     )
 }
@@ -57,15 +55,15 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: Color.light,
     },
-    countView:{
+    countView: {
         position: 'absolute',
         top: 0,
         right: 0,
         height: 40,
         width: 50,
         alignItems: 'center',
-        justifyContent:"center",
+        justifyContent: 'center',
         backgroundColor: Color.yellowColor,
-        borderBottomLeftRadius:20
-    }
+        borderBottomLeftRadius: 20,
+    },
 })

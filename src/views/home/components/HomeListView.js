@@ -13,10 +13,10 @@ const HomeListView = ({ onPress, item }) => {
                     style={styles.imageStyle}
                     source={{ uri: item?.image }}
                     progressiveRenderingEnabled={true}
-                    cache="reload"
+                    cache='reload'
                 />
                 <Spacing type={'h'} val={15} />
-                <Text style ={[Style.colorBlack]}>{item?.title}</Text>
+                <Text style={[Style.colorBlack]}>{item?.title}</Text>
             </View>
             <View style={styles.innerBox}>
                 {item?.count > 0 && (

@@ -8,7 +8,7 @@ export default Style = StyleSheet.create({
     },
     centerJustify: {
         justifyContent: 'center',
-    }, 
+    },
     textAlign: {
         textAlign: 'center',
     },
