@@ -19,12 +19,20 @@ const HomeGridListItem = ({ item, onPress }) => {
                 style={styles.imageStyle}
                 source={{ uri: item?.image }}
                 progressiveRenderingEnabled={true}
-                cache="reload"
-                
+                cache='reload'
             />
             <Spacing val={10} />
-            <Text style = {[Style.colorBlack, Style.textAlign]}>{item?.title}</Text>
+            <Text style={[Style.colorBlack, Style.textAlign]}>
+                {item?.title}
+            </Text>
             <Spacing val={10} />
+            {item?.count > 0 ? (
+                <View
+                style={styles.countView}>
+                <Text style = {Style.colorWhite}>{item?.count}</Text>
+            </View>
+            ):null}
+           
         </TouchableOpacity>
     )
 }
@@ -42,10 +50,22 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         overflow: 'hidden',
         margin: 10,
+        position: 'relative',
     },
     imageStyle: {
         height: 90,
         width: '100%',
-        backgroundColor:Color.light
+        backgroundColor: Color.light,
     },
+    countView:{
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        height: 40,
+        width: 50,
+        alignItems: 'center',
+        justifyContent:"center",
+        backgroundColor: Color.yellowColor,
+        borderBottomLeftRadius:20
+    }
 })

@@ -45,9 +45,9 @@ export default HomeScreen = ({}) => {
                         layout={layout === 'grid' ? layout : ''}
                     >
                         {layout === 'grid' ? (
-                            <SelectedGridIcon height={25} width={25} />
+                            <SelectedGridIcon height={20} width={20} />
                         ) : (
-                            <UnSelectedGridIcon height={25} width={25} />
+                            <UnSelectedGridIcon height={20} width={20} />
                         )}
                     </RoundedView>
 
@@ -56,9 +56,9 @@ export default HomeScreen = ({}) => {
                         layout={layout === 'list' ? layout : ''}
                     >
                         {layout === 'list' ? (
-                            <SelectedListIcon height={25} width={25} />
+                            <SelectedListIcon height={20} width={20} />
                         ) : (
-                            <UnSelectedListIcon height={25} width={25} />
+                            <UnSelectedListIcon height={20} width={20} />
                         )}
                     </RoundedView>
                 </View>
